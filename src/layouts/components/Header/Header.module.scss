@@ -5,12 +5,10 @@
     right: 0;
     z-index: 9998;
     backdrop-filter: blur(50px);
-    background: linear-gradient(
-        transparent,
-        transparent 50%,
-        var(--layout-header-bg) 50%,
-        var(--layout-header-bg)
-    );
+    background: linear-gradient(transparent,
+            transparent 50%,
+            var(--layout-header-bg) 50%,
+            var(--layout-header-bg));
     background-size: 100% 200%;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     transition: background-position 0.4s;
@@ -20,17 +18,20 @@
         // tablet
         width: calc(100% - 70px);
     }
+
     @media (max-width: 900px) {
         .btn_download {
             display: none;
         }
     }
+
     @media (max-width: 600px) {
         width: 100%;
         padding: 10px 5px;
         background-color: hsla(0, 0, 100%, 0.1);
         height: 60px;
     }
+
     &.isScroll {
         backdrop-filter: blur(50px);
         background-position: -100% -100%;
@@ -38,6 +39,7 @@
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     }
 }
+
 .inner {
     display: flex;
     align-items: center;
@@ -45,15 +47,18 @@
     height: 100%;
 
     @media (max-width: 600px) {
+
         //mobile
         .btn_search_header_mobile {
             font-size: 25px;
         }
+
         .btn_barsort {
             font-size: 25px;
             padding: 10px;
         }
     }
+
     //logo in mobile
     .logo {
         position: absolute;
@@ -62,8 +67,7 @@
         transform: translateX(-50%) translateY(-50%);
         width: 120px;
         height: 40px;
-        background: url('https://static-zmp3.zmdcdn.me/skins/zmp3-mobile-v5.2/images/logo-mp-3.svg')
-            50% / contain no-repeat;
+        background: url('https://cdn.haitrieu.com/wp-content/uploads/2021/10/Logo-DH-Cong-Nghe-Thong-Tin-UIT.png') 50% / contain no-repeat;
     }
 
     .button_controls_right {
@@ -73,6 +77,7 @@
         gap: 10px;
         margin-right: 5px;
     }
+
     .button_controls_left {
         display: flex;
         align-items: center;
@@ -94,12 +99,15 @@
         right: 0;
         z-index: -1;
     }
+
     .off {
         animation: slideTop ease 0.3s;
     }
+
     .on {
         animation: slideBot ease 0.3s;
     }
+
     .search_form {
         max-width: unset;
         top: 20px;
@@ -111,16 +119,19 @@
     max-width: 440px;
     min-width: 280px;
 }
+
 .icon-arrow-prev,
 .icon-arrow-next {
     margin-right: 20px;
-    color: var(--text-primary); 
+    color: var(--text-primary);
     font-size: 18px;
 
 }
+
 .disabled {
     color: rgba(215, 212, 212, 0.527);
 }
+
 .avatar {
     width: 40px;
     height: 40px;
@@ -130,6 +141,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:hover {
         filter: brightness(0.9);
     }
@@ -146,14 +158,17 @@
     from {
         transform: translateY(-1000px);
     }
+
     to {
         transform: translateY(0%);
     }
 }
+
 @keyframes slideTop {
     from {
         transform: translateY(0);
     }
+
     to {
         transform: translateY(-1000px);
     }
